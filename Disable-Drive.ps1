@@ -5,9 +5,6 @@
 # Step 5. Distribute each random file into a random directory on the C:\ drive
 # Step 6. Create scheduled task to run this script at certain intervals.
 
-
-
-
 # STEP 1
 # Find every writable directory on the C:\ drive and put each path into an array.
 Function Get-Directories($TargetDrive) {
