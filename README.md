@@ -1,4 +1,4 @@
-# powershell
+# PowerShell
 Miscellaneous PowerShell scripts  
 
 ### *Get-RandomNumber.ps1*  
